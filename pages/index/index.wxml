@@ -1,0 +1,14 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">授权码</view>
+        <view class="page__desc">基础的获取登录态、手机号 code 模版，便于后端人员进行开发调试。</view>
+    </view>
+    <view class="page__bd">
+        <button class="weui-btn" type="primary" bind:tap="handleLogin">登录</button>
+        <button class="weui-btn" type="primary" open-type="getPhoneNumber" bind:getphonenumber="handleTel">手机号快速验证</button>
+        <button class="weui-btn" type="primary" open-type="getRealtimePhoneNumber" bind:getrealtimephonenumber="handleTel">手机号实时验证</button>
+    </view>
+    <view class="page__hd">
+        <view class="page__desc content" bind:tap="handleCopy">{{code}}</view>
+    </view>
+</view>
